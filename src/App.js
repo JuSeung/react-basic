@@ -2,24 +2,24 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const name = '엘리';
+    const list = ['우유', '테스트', '바나나'];
+    return (
+        <>
+            <h1 className='orange'>{`Hello!! ${name}`}</h1>
+            <ul>
+                {
+                    list.map((item, index) => (
+                    <li>{item}</li>
+                ))
+                }
+            </ul>
+            <img
+                style={{width:'100px', height:'100px'}}
+                src={logo}
+                alt="logo" />
+        </>
+    );
 }
 
 export default App;
